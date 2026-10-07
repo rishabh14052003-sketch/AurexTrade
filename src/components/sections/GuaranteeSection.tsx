@@ -22,7 +22,7 @@ export const GuaranteeSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-[#0a0a0a] border-t border-b border-[#222222] py-24 px-4 sm:px-6 lg:px-8">
+    <section className="border-y border-white/10 bg-[#111216] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -32,8 +32,8 @@ export const GuaranteeSection: React.FC = () => {
       >
         {/* 1. Shield Check Icon with Red Glow */}
         <motion.div variants={itemVariants} className="mb-6">
-          <div className="p-4 rounded-full bg-[#CC0000]/10 border border-[#CC0000]/30 shadow-[0_0_30px_rgba(204,0,0,0.2)]">
-            <ShieldCheck className="w-[72px] h-[72px] text-[#CC0000] drop-shadow-[0_0_15px_rgba(204,0,0,0.5)]" />
+          <div className="rounded-full border border-blue-300/25 bg-blue-300/10 p-4 shadow-[0_0_30px_rgba(90,150,255,0.13)]">
+            <ShieldCheck className="h-[72px] w-[72px] text-blue-200" />
           </div>
         </motion.div>
 
@@ -53,9 +53,9 @@ export const GuaranteeSection: React.FC = () => {
         {/* 4. Subheading */}
         <motion.p
           variants={itemVariants}
-          className="text-xl sm:text-2xl font-bold text-[#CC0000] mb-6"
+          className="mb-6 text-xl font-bold text-blue-200 sm:text-2xl"
         >
-          No Questions Asked*
+          &mdash; No Questions Asked*
         </motion.p>
 
         {/* 5. Main Paragraph */}
@@ -71,20 +71,20 @@ export const GuaranteeSection: React.FC = () => {
         {/* 6. Feature Points Row */}
         <motion.div
           variants={itemVariants}
-          className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 mb-10 bg-[#111111] p-4 sm:p-6 rounded-[4px] border border-[#222222] w-full max-w-lg"
+          className="mb-10 flex w-full max-w-lg flex-wrap items-center justify-center gap-6 rounded-md border border-white/10 bg-[#0b0c0f] p-4 sm:gap-10 sm:p-6"
         >
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-5 h-5 text-[#CC0000]" />
+            <CheckCircle2 className="h-5 w-5 text-blue-200" />
             <span className="text-white text-sm font-semibold">Full Refund</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-5 h-5 text-[#CC0000]" />
+            <CheckCircle2 className="h-5 w-5 text-blue-200" />
             <span className="text-white text-sm font-semibold">
               No Forms Needed
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-5 h-5 text-[#CC0000]" />
+            <CheckCircle2 className="h-5 w-5 text-blue-200" />
             <span className="text-white text-sm font-semibold">
               7 Days Window
             </span>
@@ -104,7 +104,7 @@ export const GuaranteeSection: React.FC = () => {
         </motion.div>
 
         {/* 8. Footnote */}
-        <motion.p variants={itemVariants} className="text-[#444444] text-xs">
+        <motion.p variants={itemVariants} className="text-xs text-white/35">
           *Refund requests must be submitted within 7 days of purchase date.
         </motion.p>
       </motion.div>

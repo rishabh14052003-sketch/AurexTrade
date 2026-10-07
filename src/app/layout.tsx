@@ -11,21 +11,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AurexTrade | Professional Forex Trading Courses",
+  title: "NeoEditFX | DaVinci Resolve Plugins & Presets",
   description:
-    "From first trade to consistent performance. Master forex trading with AurexTrade's professional courses.",
+    "Effects, text animations, and motion tools for DaVinci Resolve.",
   keywords: [
-    "forex trading course",
-    "forex education",
-    "SMC trading",
-    "price action",
-    "forex for beginners",
+    "DaVinci Resolve plugins",
+    "video editing presets",
+    "text animation plugins",
+    "video effects",
   ],
-  icons: {
-    icon: "/assets/logos/axt-circle.png",
-    shortcut: "/assets/logos/axt-circle.png",
-    apple: "/assets/logos/axt-circle.png",
-  },
 };
 
 export default function RootLayout({

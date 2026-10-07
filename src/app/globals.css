@@ -2,13 +2,13 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #000000;
-  --color-bg-secondary: #111111;
-  --color-accent: #CC0000;
-  --color-accent-hover: #aa0000;
+  --color-bg: #0b0c0f;
+  --color-bg-secondary: #111216;
+  --color-accent: #9ec5ff;
+  --color-accent-hover: #c5dcff;
   --color-text-primary: #ffffff;
-  --color-text-secondary: #999999;
-  --color-border: #222222;
+  --color-text-secondary: #999ba3;
+  --color-border: rgba(255, 255, 255, 0.1);
   --font-main: 'Inter', sans-serif;
 }
 
@@ -35,22 +35,22 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #111111;
+  background: #111216;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #CC0000;
+  background: #9ec5ff;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #aa0000;
+  background: #c5dcff;
 }
 
 /* Custom Selection */
 ::selection {
-  background-color: #CC0000;
-  color: #ffffff;
+  background-color: #9ec5ff;
+  color: #101115;
 }
 
 /* Keyframe animations for marquee */

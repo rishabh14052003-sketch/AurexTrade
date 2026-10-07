@@ -1,124 +1,39 @@
-"use client";
+import Link from "next/link";
+import { ArrowRight, Check, Star } from "lucide-react";
 
-import React from "react";
-import Badge from "../ui/Badge";
-import Button from "../ui/Button";
-import { motion } from "framer-motion";
-
-export const HeroSection: React.FC = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeOut" as const },
-    },
-  };
-
-  const stats = [
-    { value: "500+", label: "Students" },
-    { value: "4.9/5", label: "Rating" },
-    { value: "7 Core", label: "Modules" },
-    { value: "Lifetime", label: "Access" },
-  ];
-
+export default function HeroSection() {
   return (
-    <section className="relative min-h-[calc(100vh-64px)] bg-[#000000] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-20 overflow-hidden">
-      {/* Background Radial Glow */}
-      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_rgba(204,0,0,0.12)_0%,_transparent_70%)]" />
-
-      {/* Main Content Staggered Animation */}
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="relative z-10 max-w-[900px] w-full mx-auto flex flex-col items-center text-center"
-      >
-        {/* 1. Badge */}
-        <motion.div variants={itemVariants} className="mb-6">
-          <Badge variant="outline">FOREX TRADING COURSE</Badge>
-        </motion.div>
-
-        {/* 2. Headline */}
-        <motion.h1
-          variants={itemVariants}
-          className="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-white leading-[1.1] max-w-[800px] mb-6"
-        >
-          Master Forex Trading. Trade With{" "}
-          <span className="text-[#CC0000]">Confidence</span>.
-        </motion.h1>
-
-        {/* 3. Subheading Paragraph */}
-        <motion.p
-          variants={itemVariants}
-          className="text-base sm:text-lg text-[#999999] max-w-[600px] mb-10 leading-relaxed font-normal"
-        >
-          Professional forex education from market structure to
-          high-probability trade setups.
-        </motion.p>
-
-        {/* 4. Action Buttons */}
-        <motion.div
-          variants={itemVariants}
-          className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-16"
-        >
-          <Button
-            href="/shop"
-            variant="primary"
-            size="lg"
-            className="w-full sm:w-auto min-w-[200px]"
-          >
-            Enroll Now &rarr;
-          </Button>
-          <Button
-            href="#courses"
-            variant="outline"
-            size="lg"
-            className="w-full sm:w-auto min-w-[200px]"
-          >
-            View Curriculum
-          </Button>
-        </motion.div>
-
-        {/* 5. Stats Row */}
-        <motion.div
-          variants={itemVariants}
-          className="w-full max-w-2xl bg-[#111111]/80 backdrop-blur-sm border border-[#222222] rounded-[4px] p-4 sm:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-0"
-        >
-          {stats.map((stat, idx) => (
-            <div
-              key={idx}
-              className={`flex flex-col items-center justify-center py-2 ${
-                idx !== stats.length - 1
-                  ? "md:border-r border-[#222222]"
-                  : ""
-              }`}
-            >
-              <span className="text-xl sm:text-2xl font-black text-white">
-                {stat.value}
-              </span>
-              <span className="text-xs text-[#999999] font-medium uppercase tracking-wider mt-1">
-                {stat.label}
-              </span>
-            </div>
-          ))}
-        </motion.div>
-      </motion.div>
-
-      {/* Subtle Bottom Fade Overlay */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#000000] to-transparent pointer-events-none" />
-    </section>
+    <>
+      <section className="relative isolate min-h-[610px] overflow-hidden border-b border-white/10 bg-[#0b0c0f] sm:min-h-[700px]">
+        <div
+          className="absolute inset-0 -z-20 bg-cover bg-[center_42%] opacity-60"
+          style={{ backgroundImage: "url('https://neoeditfx.com/assets/videos/hero-reveal-poster.jpg')" }}
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#090a0d] via-[#090a0d]/85 to-[#090a0d]/25" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#090a0d] via-transparent to-black/15" />
+        <div className="mx-auto flex min-h-[540px] max-w-[1440px] items-center px-5 py-12 sm:min-h-[700px] sm:items-end sm:px-10 sm:pb-24 sm:pt-24">
+          <div className="max-w-[680px]">
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-blue-300">DaVinci Resolve plugins & presets</p>
+            <h1 className="max-w-[640px] text-5xl font-black leading-[0.98] tracking-tight text-white sm:text-7xl">
+              Take your edits to the next level.
+            </h1>
+            <p className="mt-6 max-w-lg text-base leading-7 text-white/70 sm:text-lg">
+              Plugins and presets for DaVinci Resolve. Drag them on, done.
+            </p>
+            <Link href="/shop" className="mt-8 inline-flex min-h-12 items-center gap-3 rounded-full bg-white px-6 text-sm font-bold text-[#101115] transition-colors hover:bg-blue-100">
+              Shop now <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section aria-label="Why editors trust NeoEditFX" className="border-b border-white/10 bg-[#111216]">
+        <div className="mx-auto grid max-w-[1440px] grid-cols-2 gap-x-4 gap-y-5 px-5 py-6 text-center sm:grid-cols-4 sm:px-10">
+          <p className="text-xs font-semibold text-white/75 sm:text-sm">Trusted by <strong className="text-white">26,600+</strong> editors</p>
+          <p className="flex items-center justify-center gap-2 text-xs font-semibold text-white/75 sm:text-sm"><span className="flex text-amber-300"><Star className="h-3.5 w-3.5 fill-current" /><Star className="h-3.5 w-3.5 fill-current" /><Star className="h-3.5 w-3.5 fill-current" /><Star className="h-3.5 w-3.5 fill-current" /><Star className="h-3.5 w-3.5 fill-current" /></span> 4.9/5 verified reviews</p>
+          <p className="text-xs font-semibold text-white/75 sm:text-sm"><strong className="text-white">307+</strong> plugins and presets</p>
+          <p className="flex items-center justify-center gap-2 text-xs font-semibold text-white/75 sm:text-sm"><Check className="h-4 w-4 text-emerald-300" /> Resolve Free and Studio</p>
+        </div>
+      </section>
+    </>
   );
-};
-
-export default HeroSection;
+}

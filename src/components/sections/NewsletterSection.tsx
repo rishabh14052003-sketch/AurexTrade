@@ -10,22 +10,24 @@ export const NewsletterSection: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email.trim()) {
+      const subject = encodeURIComponent("NeoEditFX updates subscription");
+      const body = encodeURIComponent(`Please add ${email.trim()} to NeoEditFX product updates.`);
+      window.location.href = `mailto:contact@neoeditfx.com?subject=${subject}&body=${body}`;
       setIsSubmitted(true);
-      setEmail("");
     }
   };
 
   return (
-    <section className="bg-[#0a0a0a] py-24 border-t border-[#222222]">
+    <section className="border-t border-white/10 bg-[#111216] py-20 sm:py-24">
       <div className="max-w-[600px] mx-auto px-4 sm:px-6 text-center">
         {/* Heading */}
         <h2 className="text-3xl sm:text-4xl font-bold uppercase text-white tracking-tight mb-3">
-          Stay Ahead of the Market
+          New packs before anyone else
         </h2>
 
         {/* Paragraph */}
         <p className="text-[#999999] text-sm sm:text-base mb-10 leading-relaxed">
-          Get trading insights, course updates, and early access to new content.
+          Be first to hear about new plugins, updates, and subscriber-only offers.
         </p>
 
         {/* Form Container */}
@@ -53,14 +55,14 @@ export const NewsletterSection: React.FC = () => {
         ) : (
           <div className="bg-[#111111] border border-[#CC0000]/40 p-4 rounded-[2px] max-w-lg mx-auto">
             <p className="text-[#CC0000] font-semibold text-base">
-              You are in! Stay tuned.
+              Your email app opened. Send the message to request updates.
             </p>
           </div>
         )}
 
         {/* Spam Disclaimer Footnote */}
         <p className="text-[#444444] text-xs mt-4">
-          No spam. Unsubscribe anytime.
+          Your email app will open to send the signup request.
         </p>
       </div>
     </section>

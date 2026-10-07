@@ -1,14 +1,13 @@
 export interface Product {
   id: string;
-  tag: string;
   title: string;
   subtitle: string;
-  price?: number;
+  image: string;
+  price: number;
   originalPrice?: number;
-  modules: string[];
-  isBonus?: boolean;
-  bonusLabel?: string;
-  rating?: number;
+  rating: number;
+  badge?: string;
+  highlights: string[];
 }
 
 export interface Review {

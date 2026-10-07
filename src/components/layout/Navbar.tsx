@@ -1,104 +1,63 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import Button from "../ui/Button";
-import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Menu, ShoppingBag, X } from "lucide-react";
 
-export const Navbar: React.FC = () => {
+const links = [
+  { name: "Home", href: "/" },
+  { name: "Shop", href: "/shop" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
+];
+
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Shop", href: "/shop" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
-  ];
-
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#000000]/85 backdrop-blur-md border-b border-[#222222] h-[64px]">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
-        {/* Left Side: Logo */}
-        <Link href="/" className="flex items-center">
-          <Image
-            src="/assets/logos/axt-white.png"
-            alt="AurexTrade Logo"
-            width={140}
-            height={32}
-            priority
-            className="object-contain h-8 w-auto"
-          />
-        </Link>
-
-        {/* Center: Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="text-white hover:text-[#CC0000] font-medium text-xs uppercase tracking-[0.1em] transition-colors duration-200"
-            >
-              {link.name}
-            </Link>
-          ))}
-        </nav>
-
-        {/* Right Side: Enroll CTA (Desktop) */}
-        <div className="hidden md:flex items-center">
-          <Button href="/shop" variant="primary" size="sm">
-            Enroll Now
-          </Button>
-        </div>
-
-        {/* Mobile Hamburger Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-white p-2 focus:outline-none hover:text-[#CC0000] transition-colors"
-          aria-label="Toggle Navigation Menu"
-        >
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-      </div>
-
-      {/* Mobile Menu Dropdown */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" as const }}
-            className="md:hidden bg-[#000000] border-b border-[#222222] overflow-hidden"
+    <>
+      <Link
+        href="/shop"
+        className="flex min-h-10 items-center justify-center gap-2 bg-[#17191d] px-4 text-center text-xs font-semibold text-white/85 transition-colors hover:text-white sm:text-sm"
+      >
+        Get the Full Stack Bundle, every pack, lifetime access, all in one.
+        <ArrowRight className="h-4 w-4 shrink-0 text-blue-300" />
+      </Link>
+      <header className="relative z-50 border-b border-white/10 bg-[#0b0c0f]">
+        <div className="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between px-5 sm:px-8">
+          <button
+            type="button"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            className="flex h-10 w-10 items-center justify-center text-white/75 hover:text-white md:hidden"
           >
-            <div className="px-6 py-6 flex flex-col gap-5">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-white hover:text-[#CC0000] font-medium text-sm uppercase tracking-[0.1em] transition-colors py-1 border-b border-[#111111]"
-                >
-                  {link.name}
-                </Link>
-              ))}
-              <div className="pt-2">
-                <Button
-                  href="/shop"
-                  variant="primary"
-                  className="w-full"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Enroll Now
-                </Button>
-              </div>
-            </div>
-          </motion.div>
+            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+          <Link href="/" aria-label="NeoEditFX home" className="flex items-center gap-2">
+            <span className="text-2xl font-black italic tracking-tight text-white">NE</span>
+            <span className="hidden text-[10px] font-semibold uppercase tracking-[0.18em] text-white/45 sm:inline">NeoEditFX</span>
+          </Link>
+          <nav className="hidden items-center gap-8 md:flex">
+            {links.map((link) => (
+              <Link key={link.href} href={link.href} className="text-sm font-medium text-white/65 transition-colors hover:text-white">
+                {link.name}
+              </Link>
+            ))}
+          </nav>
+          <Link href="/shop" aria-label="Shop packs" className="flex h-10 w-10 items-center justify-center text-white/75 hover:text-white">
+            <ShoppingBag className="h-5 w-5" />
+          </Link>
+        </div>
+        {isOpen && (
+          <nav className="absolute left-0 right-0 top-full border-b border-white/10 bg-[#101115] px-5 py-3 shadow-xl md:hidden">
+            {links.map((link) => (
+              <Link key={link.href} href={link.href} onClick={() => setIsOpen(false)} className="block border-b border-white/5 py-4 text-sm font-medium text-white/80 last:border-0">
+                {link.name}
+              </Link>
+            ))}
+          </nav>
         )}
-      </AnimatePresence>
-    </header>
+      </header>
+    </>
   );
-};
-
-export default Navbar;
+}

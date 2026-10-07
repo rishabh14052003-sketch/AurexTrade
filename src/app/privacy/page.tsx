@@ -1,87 +1,27 @@
-import React from "react";
-import Badge from "@/components/ui/Badge";
+import Link from "next/link";
 
-export const metadata = {
-  title: "Privacy Policy | AurexTrade",
-  description:
-    "AurexTrade Privacy Policy. Learn how we collect, protect, and handle your personal data.",
-};
+export const metadata = { title: "Privacy Policy | NeoEditFX" };
+
+const sections = [
+  { title: "Information we handle", text: "When you contact us or place an order, we may receive your name, email address, order details, and support messages. The checkout provider processes payment information; this site should not store full card details." },
+  { title: "How information is used", text: "Information is used to provide purchased products, respond to support requests, send order-related messages, maintain site security, and understand how the site is used." },
+  { title: "Service providers and analytics", text: "Commerce, hosting, analytics, and email providers may process information to deliver their services. Confirm the active providers and cookie-consent configuration before launch, then list them here with links to their privacy notices." },
+  { title: "Your choices and rights", text: "Depending on your location, you may be able to request access, correction, deletion, restriction, or a copy of personal information, or withdraw consent where processing relies on consent." },
+  { title: "Contact", text: "For privacy questions or requests, email contact@neoeditfx.com. The data controller identity, retention periods, and applicable local disclosures should be confirmed by the site owner." },
+];
 
 export default function PrivacyPage() {
   return (
-    <div className="bg-[#000000] text-white py-16 lg:py-24">
-      <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4">
-            DATA PROTECTION
-          </Badge>
-          <h1 className="text-4xl sm:text-5xl font-black uppercase tracking-tight text-white mb-4">
-            Privacy Policy
-          </h1>
-          <p className="text-base sm:text-lg text-[#999999]">
-            Last updated: January 2026
-          </p>
+    <main className="min-h-[70vh] bg-[#0b0c0f] px-5 py-16 text-white sm:px-10 sm:py-24">
+      <div className="mx-auto max-w-[850px]">
+        <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-blue-300">Legal</p>
+        <h1 className="text-4xl font-bold sm:text-5xl">Privacy Policy</h1>
+        <p className="mt-4 text-sm text-white/45">Last updated: October 2026</p>
+        <div className="mt-10 divide-y divide-white/10 border-y border-white/10">
+          {sections.map((section, index) => <section key={section.title} className="py-6"><h2 className="text-lg font-semibold">{index + 1}. {section.title}</h2><p className="mt-3 text-sm leading-7 text-white/55">{section.text}</p></section>)}
         </div>
-
-        {/* Policy Content */}
-        <div className="bg-[#111111] border border-[#222222] rounded-[4px] p-8 lg:p-12 space-y-8 text-sm sm:text-base leading-relaxed text-[#999999]">
-          <div>
-            <h2 className="text-xl font-bold uppercase text-white mb-3">
-              1. Information We Collect
-            </h2>
-            <p>
-              When you enroll in a course or subscribe to our newsletter, AurexTrade collects personal information required to deliver your course materials. This includes your name, email address, payment details processed securely via encrypted payment gateways, and contact preferences.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-xl font-bold uppercase text-white mb-3">
-              2. How We Use Your Information
-            </h2>
-            <p className="mb-3">
-              We use your collected information strictly for:
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-white text-xs sm:text-sm pl-2">
-              <li>Delivering course access links and digital materials immediately upon enrollment.</li>
-              <li>Processing refund requests in accordance with our 7-day policy.</li>
-              <li>Sending educational trading insights and course updates (only if subscribed).</li>
-              <li>Providing responsive 24/7 student support.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h2 className="text-xl font-bold uppercase text-white mb-3">
-              3. Data Protection & Third Parties
-            </h2>
-            <p>
-              We treat your privacy with institutional integrity. AurexTrade never sells, rents, or trades your personal information to third-party advertisers. All transaction data is processed using SSL 256-bit encryption.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-xl font-bold uppercase text-white mb-3">
-              4. Cookies & Analytics
-            </h2>
-            <p>
-              We use essential performance cookies to maintain site security, remember session preferences, and improve user navigation. You can disable cookies through your browser settings at any time.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-xl font-bold uppercase text-white mb-3">
-              5. Contacting Us
-            </h2>
-            <p>
-              If you have any questions or data removal requests regarding this Privacy Policy, please email{" "}
-              <a href="mailto:support@aurextrade.com" className="text-white hover:text-[#CC0000] underline">
-                support@aurextrade.com
-              </a>
-              .
-            </p>
-          </div>
-        </div>
+        <p className="mt-6 text-xs leading-6 text-white/35">This draft must be checked against the live checkout, analytics, email, cookie, and data-retention setup before publication. <Link href="/contact" className="text-white/65 underline">Contact support</Link>.</p>
       </div>
-    </div>
+    </main>
   );
 }

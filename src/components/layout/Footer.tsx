@@ -1,174 +1,56 @@
-import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { Instagram, Youtube, Send } from "lucide-react";
+import { Instagram, Youtube } from "lucide-react";
 
-export const Footer: React.FC = () => {
+const packLinks = [
+  ["Full Stack Bundle", "/products/full-stack-bundle"],
+  ["Animated Text Pack", "/products/animated-text-pack"],
+  ["Effects Core Pack", "/products/effects-core-pack"],
+  ["Caption Creator Pack", "/products/caption-creator-pack"],
+  ["Motion Essentials Pack", "/products/motion-essentials-pack"],
+  ["Highlighter Pro", "/products/highlighter-pro"],
+];
+
+export default function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] border-t border-[#222222] pt-16 pb-8">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Top 4-Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12">
-          {/* Column 1: Brand & Socials (Spans 2 cols on lg) */}
-          <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="inline-block">
-              <Image
-                src="/assets/logos/axt-white.png"
-                alt="AurexTrade Logo"
-                width={150}
-                height={34}
-                className="object-contain h-8 w-auto"
-              />
-            </Link>
-            <p className="text-[#999999] text-sm max-w-sm leading-relaxed">
-              From First Trade to Consistent Performance. Professional forex
-              education from market structure to high-probability trade setups.
-            </p>
-
-            {/* Social Icons */}
-            <div className="flex items-center gap-4 pt-2">
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="w-9 h-9 rounded-[2px] bg-[#111111] border border-[#222222] flex items-center justify-center text-white hover:text-[#CC0000] hover:border-[#CC0000] transition-colors"
-              >
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube"
-                className="w-9 h-9 rounded-[2px] bg-[#111111] border border-[#222222] flex items-center justify-center text-white hover:text-[#CC0000] hover:border-[#CC0000] transition-colors"
-              >
-                <Youtube className="w-4 h-4" />
-              </a>
-              <a
-                href="https://t.me"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Telegram"
-                className="w-9 h-9 rounded-[2px] bg-[#111111] border border-[#222222] flex items-center justify-center text-white hover:text-[#CC0000] hover:border-[#CC0000] transition-colors"
-              >
-                <Send className="w-4 h-4" />
-              </a>
-            </div>
-          </div>
-
-          {/* Column 2: Company */}
-          <div className="space-y-3">
-            <h4 className="font-bold text-white uppercase tracking-[0.1em] text-xs">
-              Company
-            </h4>
-            <ul className="space-y-2.5">
-              <li>
-                <Link
-                  href="/about"
-                  className="text-[#999999] hover:text-white transition-colors text-xs lg:text-sm"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/shop"
-                  className="text-[#999999] hover:text-white transition-colors text-xs lg:text-sm"
-                >
-                  Shop Courses
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-[#999999] hover:text-white transition-colors text-xs lg:text-sm"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 3: Legal */}
-          <div className="space-y-3">
-            <h4 className="font-bold text-white uppercase tracking-[0.1em] text-xs">
-              Legal
-            </h4>
-            <ul className="space-y-2.5">
-              <li>
-                <Link
-                  href="/terms"
-                  className="text-[#999999] hover:text-white transition-colors text-xs lg:text-sm"
-                >
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/privacy"
-                  className="text-[#999999] hover:text-white transition-colors text-xs lg:text-sm"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/refund-policy"
-                  className="text-[#999999] hover:text-white transition-colors text-xs lg:text-sm"
-                >
-                  Refund Policy
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 4: Support */}
-          <div className="space-y-3">
-            <h4 className="font-bold text-white uppercase tracking-[0.1em] text-xs">
-              Support
-            </h4>
-            <ul className="space-y-2.5">
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-[#999999] hover:text-white transition-colors text-xs lg:text-sm"
-                >
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#faq"
-                  className="text-[#999999] hover:text-white transition-colors text-xs lg:text-sm"
-                >
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/refund-policy"
-                  className="text-[#999999] hover:text-white transition-colors text-xs lg:text-sm"
-                >
-                  7-Day Guarantee
-                </Link>
-              </li>
-            </ul>
+    <footer className="border-t border-white/10 bg-[#0b0c0f]">
+      <div className="mx-auto grid max-w-[1440px] gap-12 px-5 py-14 sm:px-10 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
+        <div>
+          <Link href="/" className="text-2xl font-black italic tracking-tight text-white">NE</Link>
+          <p className="mt-4 max-w-sm text-sm leading-6 text-white/50">Effects, text animations, and motion tools for DaVinci Resolve.</p>
+          <div className="mt-5 flex gap-3">
+            <a href="https://instagram.com/neoeditfx" aria-label="NeoEditFX on Instagram" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/60 hover:text-white"><Instagram className="h-4 w-4" /></a>
+            <a href="https://youtube.com/@neoeditfx" aria-label="NeoEditFX on YouTube" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/60 hover:text-white"><Youtube className="h-4 w-4" /></a>
           </div>
         </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t border-[#222222] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-[#999999]">
-            © 2026 AurexTrade. All Rights Reserved.
-          </p>
-          <p className="text-xs text-[#444444] font-medium tracking-wider uppercase">
-            Professional Forex Education
-          </p>
+        <div>
+          <h2 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-white">Packs</h2>
+          <ul className="space-y-3">{packLinks.map(([label, href]) => <li key={href}><Link href={href} className="text-sm text-white/50 hover:text-white">{label}</Link></li>)}</ul>
+        </div>
+        <div>
+          <h2 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-white">Company</h2>
+          <ul className="space-y-3">
+            <li><Link href="/about" className="text-sm text-white/50 hover:text-white">About</Link></li>
+            <li><Link href="/shop" className="text-sm text-white/50 hover:text-white">Shop</Link></li>
+            <li><Link href="/contact" className="text-sm text-white/50 hover:text-white">Contact</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-white">Support & legal</h2>
+          <ul className="space-y-3">
+            <li><Link href="/contact" className="text-sm text-white/50 hover:text-white">Contact support</Link></li>
+            <li><Link href="/#faq" className="text-sm text-white/50 hover:text-white">FAQ</Link></li>
+            <li><Link href="/terms" className="text-sm text-white/50 hover:text-white">Terms</Link></li>
+            <li><Link href="/privacy" className="text-sm text-white/50 hover:text-white">Privacy</Link></li>
+            <li><Link href="/refund-policy" className="text-sm text-white/50 hover:text-white">Refund policy</Link></li>
+          </ul>
+        </div>
+      </div>
+      <div className="border-t border-white/10 px-5 py-5 sm:px-10">
+        <div className="mx-auto flex max-w-[1440px] flex-col gap-2 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between">
+          <p>© 2026 NeoEditFX. All rights reserved.</p>
+          <p>Plugins and presets for DaVinci Resolve</p>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

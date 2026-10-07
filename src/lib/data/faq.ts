@@ -3,44 +3,44 @@ import { FAQItem } from "@/types";
 export const faqs: FAQItem[] = [
   {
     id: "1",
-    question: "Is this course suitable for complete beginners?",
+    question: "Do these plugins work with DaVinci Resolve Free?",
     answer:
-      "Yes, we start from the very basics of forex markets and build up to advanced strategies step by step.",
+      "The packs are designed to work with DaVinci Resolve Free and Studio. Check the requirements listed on each pack before installing.",
   },
   {
     id: "2",
-    question: "What is included in the course?",
+    question: "What's included in the Full Stack Bundle?",
     answer:
-      "7 core modules covering fundamentals to advanced strategies, plus the SMC Bonus Book included free with your purchase.",
+      "The bundle includes all five current paid packs, more than 307 plugins and presets, and future pack releases.",
   },
   {
     id: "3",
     question: "Is this a subscription?",
     answer:
-      "No. One-time payment, lifetime access. Pay once and access everything forever including all future updates.",
+      "No. Packs are a one-time purchase with lifetime access and updates.",
   },
   {
     id: "4",
-    question: "How do I access the course after purchase?",
+    question: "How do I install the plugins?",
     answer:
-      "You will receive an email with your access details immediately after payment is confirmed.",
+      "Installation instructions are provided with the download. Exact delivery steps depend on the checkout and file-delivery setup.",
   },
   {
     id: "5",
-    question: "Can I get a refund?",
+    question: "Do you offer refunds?",
     answer:
-      "Yes. We offer a 7-day no-questions-asked money-back guarantee. If you are not satisfied, email us within 7 days for a full refund.",
+      "Yes. Purchases are covered by the 7-Day Money-Back Guarantee — No Questions Asked*. See the Refund Policy for terms.",
   },
   {
     id: "6",
-    question: "Do I need any prior trading experience?",
+    question: "Can I use these on client projects?",
     answer:
-      "No experience required. The course is designed for complete beginners and intermediate traders alike.",
+      "Please review the license terms supplied with the product for allowed personal and commercial use.",
   },
   {
     id: "7",
-    question: "What markets does this course cover?",
+    question: "Is this a digital download?",
     answer:
-      "Primarily Forex. The concepts taught including SMC, price action, and risk management are also applicable to indices and commodities.",
+      "These products are digital plugins and presets for DaVinci Resolve. Delivery timing depends on the checkout setup.",
   },
 ];

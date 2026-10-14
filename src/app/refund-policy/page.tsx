@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
 
-export const metadata = { title: "Refund Policy | NeoEditFX" };
+export const metadata = { title: "Refund Policy | AurexTrade" };
 
 export default function RefundPolicyPage() {
   return (
@@ -15,7 +15,7 @@ export default function RefundPolicyPage() {
         </div>
         <section className="mt-10 border-t border-white/10 pt-7">
           <h2 className="text-lg font-semibold">How to request a refund</h2>
-          <p className="mt-3 text-sm leading-7 text-white/55">Email <a href="mailto:contact@neoeditfx.com" className="text-white underline">contact@neoeditfx.com</a> using the email associated with your order. Include your order number so support can find the purchase. No explanation is required.</p>
+          <p className="mt-3 text-sm leading-7 text-white/55">Email <a href="mailto:contact@aurextrade.com" className="text-white underline">contact@aurextrade.com</a> using the email associated with your order. Include your order number so support can find the purchase. No explanation is required.</p>
         </section>
         <p className="mt-8 border-t border-white/10 pt-6 text-xs leading-6 text-white/35">*The guarantee window, eligible products, processor workflow, and any mandatory consumer rights must be confirmed by the store owner and reflected in the checkout terms before launch.</p>
         <Link href="/contact" className="mt-6 inline-block text-sm font-semibold text-white/75 underline hover:text-white">Contact support</Link>

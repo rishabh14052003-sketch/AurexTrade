@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-export const metadata = { title: "Privacy Policy | NeoEditFX" };
+export const metadata = { title: "Privacy Policy | AurexTrade" };
 
 const sections = [
   { title: "Information we handle", text: "When you contact us or place an order, we may receive your name, email address, order details, and support messages. The checkout provider processes payment information; this site should not store full card details." },
   { title: "How information is used", text: "Information is used to provide purchased products, respond to support requests, send order-related messages, maintain site security, and understand how the site is used." },
   { title: "Service providers and analytics", text: "Commerce, hosting, analytics, and email providers may process information to deliver their services. Confirm the active providers and cookie-consent configuration before launch, then list them here with links to their privacy notices." },
   { title: "Your choices and rights", text: "Depending on your location, you may be able to request access, correction, deletion, restriction, or a copy of personal information, or withdraw consent where processing relies on consent." },
-  { title: "Contact", text: "For privacy questions or requests, email contact@neoeditfx.com. The data controller identity, retention periods, and applicable local disclosures should be confirmed by the site owner." },
+  { title: "Contact", text: "For privacy questions or requests, email contact@aurextrade.com. The data controller identity, retention periods, and applicable local disclosures should be confirmed by the site owner." },
 ];
 
 export default function PrivacyPage() {

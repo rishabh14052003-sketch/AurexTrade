@@ -49,8 +49,12 @@ export default function Navbar() {
           >
             {isOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
-          <Link href="/" aria-label="NeoEditFX home" className="wordmark">
-            NE
+          <Link href="/" aria-label="AurexTrade home" className="brand-link">
+            <img
+              src="/assets/logos/transparent%20white.png"
+              alt="AurexTrade logo"
+              className="brand-logo"
+            />
           </Link>
           <nav aria-label="Main navigation" className="desktop-nav">
             {links.map((link) => (

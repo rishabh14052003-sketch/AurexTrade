@@ -145,13 +145,22 @@ input {
   justify-content: space-between;
   align-items: center;
 }
-.wordmark {
-  font-size: 34px;
-  font-weight: 900;
-  font-style: italic;
-  letter-spacing: -4px;
-  line-height: 1;
-  padding-right: 4px;
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo {
+  display: block;
+  height: 44px;
+  width: auto;
+  max-width: 100%;
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.08));
+}
+
+.brand-logo-footer {
+  height: 30px;
 }
 .desktop-nav {
   display: flex;

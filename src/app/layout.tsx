@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "NeoEditFX | DaVinci Resolve Plugins & Presets",
+  title: "AurexTrade | DaVinci Resolve Plugins & Presets",
   description:
     "Effects, text animations, and motion tools for DaVinci Resolve.",
   keywords: [

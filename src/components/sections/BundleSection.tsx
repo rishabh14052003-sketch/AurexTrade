@@ -15,7 +15,7 @@ export default function BundleSection() {
       <div className="bundle-copy">
         <span className="eyebrow">The complete collection</span>
         <h2>
-          Every NeoEditFX pack.
+          Every AurexTrade pack.
           <br />
           <em>One price.</em>
         </h2>

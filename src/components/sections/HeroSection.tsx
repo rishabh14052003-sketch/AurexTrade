@@ -32,7 +32,7 @@ export default function HeroSection() {
           </Link>
         </div>
       </section>
-      <section className="trust-strip" aria-label="Why editors trust NeoEditFX">
+      <section className="trust-strip" aria-label="Why editors trust AurexTrade">
         <div>
           <strong>27,800+</strong>
           <span>editors</span>

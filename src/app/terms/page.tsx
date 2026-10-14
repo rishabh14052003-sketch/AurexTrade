@@ -1,14 +1,14 @@
 import Link from "next/link";
 
-export const metadata = { title: "Terms of Service | NeoEditFX" };
+export const metadata = { title: "Terms of Service | AurexTrade" };
 
 const sections = [
-  { title: "Digital products", text: "NeoEditFX products are digital plugins, presets, and related materials for DaVinci Resolve. Product pages describe their features and supported software versions." },
+  { title: "Digital products", text: "AurexTrade products are digital plugins, presets, and related materials for DaVinci Resolve. Product pages describe their features and supported software versions." },
   { title: "License and use", text: "A purchase grants a limited, personal license to use the product. Buyers may not redistribute, resell, share downloads, or create competing products from the supplied files. The final license terms should be approved by the rights holder before launch." },
   { title: "Payment and delivery", text: "Payments and digital delivery will be handled by the checkout provider presented during purchase. The provider, delivery timing, tax handling, and account requirements must be confirmed before checkout is enabled." },
   { title: "Guarantee", text: "Eligible purchases are covered by the 7-Day Money-Back Guarantee — No Questions Asked*. See the Refund Policy for the request window." },
   { title: "Compatibility and liability", text: "Check each product page for operating system and DaVinci Resolve requirements. Compatibility may depend on the customer's software and hardware configuration. Nothing in these terms limits consumer rights that cannot legally be limited." },
-  { title: "Governing law and contact", text: "The governing law and business identity must be confirmed by the site owner. For questions about these terms, contact contact@neoeditfx.com." },
+  { title: "Governing law and contact", text: "The governing law and business identity must be confirmed by the site owner. For questions about these terms, contact contact@aurextrade.com." },
 ];
 
 export default function TermsPage() {

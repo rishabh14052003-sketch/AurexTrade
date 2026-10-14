@@ -10,9 +10,9 @@ export const NewsletterSection: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email.trim()) {
-      const subject = encodeURIComponent("NeoEditFX updates subscription");
-      const body = encodeURIComponent(`Please add ${email.trim()} to NeoEditFX product updates.`);
-      window.location.href = `mailto:contact@neoeditfx.com?subject=${subject}&body=${body}`;
+      const subject = encodeURIComponent("AurexTrade updates subscription");
+      const body = encodeURIComponent(`Please add ${email.trim()} to AurexTrade product updates.`);
+      window.location.href = `mailto:contact@aurextrade.com?subject=${subject}&body=${body}`;
       setIsSubmitted(true);
     }
   };

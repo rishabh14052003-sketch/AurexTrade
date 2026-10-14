@@ -8,7 +8,7 @@ export const ReviewsSection: React.FC = () => {
       <div className="mx-auto mb-12 max-w-[1440px] px-5 text-center sm:px-10">
         <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-blue-300">Real reviews</p>
         <h2 className="text-3xl font-bold text-white sm:text-4xl">Don’t take our word for it</h2>
-        <p className="mt-3 text-sm text-white/55 sm:text-base">27,800+ editors use NeoEditFX in their daily workflow.</p>
+        <p className="mt-3 text-sm text-white/55 sm:text-base">27,800+ editors use AurexTrade in their daily workflow.</p>
       </div>
 
       {/* Marquee Wrapper with side gradient overlays */}

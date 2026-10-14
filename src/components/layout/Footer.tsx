@@ -15,11 +15,17 @@ export default function Footer() {
     <footer className="border-t border-white/10 bg-[#0b0c0f]">
       <div className="mx-auto grid max-w-[1440px] gap-12 px-5 py-14 sm:px-10 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
         <div>
-          <Link href="/" className="text-2xl font-black italic tracking-tight text-white">NE</Link>
+          <Link href="/" className="brand-link brand-link-footer">
+            <img
+              src="/assets/logos/transparent%20white.png"
+              alt="AurexTrade logo"
+              className="brand-logo brand-logo-footer"
+            />
+          </Link>
           <p className="mt-4 max-w-sm text-sm leading-6 text-white/50">Effects, text animations, and motion tools for DaVinci Resolve.</p>
           <div className="mt-5 flex gap-3">
-            <a href="https://instagram.com/neoeditfx" aria-label="NeoEditFX on Instagram" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/60 hover:text-white"><Instagram className="h-4 w-4" /></a>
-            <a href="https://youtube.com/@neoeditfx" aria-label="NeoEditFX on YouTube" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/60 hover:text-white"><Youtube className="h-4 w-4" /></a>
+            <a href="https://instagram.com/aurextrade" aria-label="AurexTrade on Instagram" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/60 hover:text-white"><Instagram className="h-4 w-4" /></a>
+            <a href="https://youtube.com/@aurextrade" aria-label="AurexTrade on YouTube" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/60 hover:text-white"><Youtube className="h-4 w-4" /></a>
           </div>
         </div>
         <div>
@@ -47,7 +53,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-white/10 px-5 py-5 sm:px-10">
         <div className="mx-auto flex max-w-[1440px] flex-col gap-2 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 NeoEditFX. All rights reserved.</p>
+          <p>© 2026 AurexTrade. All rights reserved.</p>
           <p>Plugins and presets for DaVinci Resolve</p>
         </div>
       </div>

@@ -2,10 +2,10 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowRight, Menu, ShoppingBag, X } from "lucide-react";
+import { ArrowRight, BookOpen, Menu, X } from "lucide-react";
 const links = [
   { name: "Home", href: "/" },
-  { name: "Shop", href: "/shop" },
+  { name: "Guides", href: "/shop" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
@@ -31,8 +31,8 @@ export default function Navbar() {
   }, []);
   return (
     <>
-      <Link href="/products/full-stack-bundle" className="announcement">
-        Every pack. Lifetime access. <span>Full Stack Bundle for $129</span>
+      <Link href="/shop" className="announcement">
+        Explore our <span>two trading guides</span>
         <ArrowRight size={14} />
       </Link>
       <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
@@ -66,12 +66,12 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <Link href="/products/full-stack-bundle" className="nav-bundle">
-              Full Stack Bundle <ArrowRight size={15} />
+            <Link href="/shop" className="nav-bundle">
+              Trading guides <ArrowRight size={15} />
             </Link>
           </nav>
-          <Link href="/shop" className="nav-icon" aria-label="Shop packs">
-            <ShoppingBag size={18} />
+          <Link href="/shop" className="nav-icon" aria-label="Browse guides">
+            <BookOpen size={18} />
           </Link>
         </div>
         {isOpen && (
@@ -92,10 +92,10 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/products/full-stack-bundle"
+              href="/shop"
               onClick={() => setIsOpen(false)}
             >
-              Full Stack Bundle <ArrowRight size={16} />
+              Trading guides <ArrowRight size={16} />
             </Link>
           </nav>
         )}

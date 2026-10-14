@@ -19,7 +19,7 @@ export default function ContactPage() {
         <div>
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-blue-300">Support & contact</p>
           <h1 className="text-4xl font-bold sm:text-5xl">How can we help?</h1>
-          <p className="mt-5 max-w-md text-sm leading-7 text-white/55 sm:text-base">Questions, install help, bug reports, or ideas for a future pack. Send a message and we typically respond within 24 hours.</p>
+          <p className="mt-5 max-w-md text-sm leading-7 text-white/55 sm:text-base">Questions about the trading guides? Send us a message.</p>
           <a href="https://discord.gg/pMypkPSphH" className="mt-8 inline-flex items-center gap-3 text-sm font-semibold text-white/80 hover:text-white"><MessageCircle className="h-5 w-5 text-blue-200" /> Join the AurexTrade Discord</a>
           <p className="mt-8 text-sm text-white/45">Email: <a className="text-white/75 hover:text-white" href="mailto:contact@aurextrade.com">contact@aurextrade.com</a></p>
         </div>

@@ -51,8 +51,8 @@ export default function Navbar() {
           </button>
           <Link href="/" aria-label="AurexTrade home" className="brand-link">
             <img
-              src="/assets/logos/transparent%20white.png"
-              alt="AurexTrade logo"
+              src="/assets/logos/aurextrade-wordmark-white.png"
+              alt="AurexTrade"
               className="brand-logo"
             />
           </Link>

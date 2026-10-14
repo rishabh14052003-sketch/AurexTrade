@@ -149,18 +149,17 @@ input {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex: 0 0 auto;
 }
 
 .brand-logo {
   display: block;
-  height: 44px;
-  width: auto;
-  max-width: 100%;
-  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.08));
+  width: clamp(150px, 18vw, 230px);
+  height: auto;
 }
 
 .brand-logo-footer {
-  height: 30px;
+  width: clamp(180px, 18vw, 230px);
 }
 .desktop-nav {
   display: flex;
@@ -601,8 +600,12 @@ input {
   .nav-shell {
     padding: 0 16px;
   }
-  .wordmark {
-    font-size: 32px;
+  .brand-logo {
+    width: clamp(150px, 48vw, 190px);
+  }
+
+  .brand-logo-footer {
+    width: 190px;
   }
   .desktop-nav {
     display: none;

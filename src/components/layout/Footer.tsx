@@ -17,8 +17,8 @@ export default function Footer() {
         <div>
           <Link href="/" className="brand-link brand-link-footer">
             <img
-              src="/assets/logos/transparent%20white.png"
-              alt="AurexTrade logo"
+              src="/assets/logos/aurextrade-wordmark-white.png"
+              alt="AurexTrade"
               className="brand-logo brand-logo-footer"
             />
           </Link>

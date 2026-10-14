@@ -29,9 +29,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} bg-[#000000] text-white antialiased`}>
+      <body
+        className={`${inter.className} bg-[#000000] text-white antialiased`}
+      >
+        <a className="skip-link" href="#main-content">
+          Skip to main content
+        </a>
         <Navbar />
-        <main className="min-h-screen">{children}</main>
+        <main id="main-content" className="min-h-screen">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

@@ -1,75 +1,52 @@
 "use client";
-
-import React, { useState } from "react";
-import { faqs } from "@/lib/data/faq";
+import { useState } from "react";
+import Link from "next/link";
 import { Plus } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-
-export const FAQSection: React.FC = () => {
-  // First item open by default
-  const [openId, setOpenId] = useState<string | null>(faqs[0]?.id || null);
-
-  const toggleFAQ = (id: string) => {
-    setOpenId(openId === id ? null : id);
-  };
-
+import { faqs } from "@/lib/data/faq";
+export default function FAQSection() {
+  const [openId, setOpenId] = useState<string | null>(null);
   return (
-    <section id="faq" className="border-t border-white/10 bg-[#0b0c0f] py-20 sm:py-24">
-      <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">
-            Frequently asked questions
-          </h2>
-          <p className="text-sm text-white/55 sm:text-base">
-            Common questions from editors before they buy.
-          </p>
-        </div>
-
-        {/* Accordion Container */}
-        <div className="border-t border-white/10">
-          {faqs.map((faq) => {
-            const isOpen = openId === faq.id;
-            return (
-              <div key={faq.id} className="border-b border-white/10">
-                {/* Question Row */}
-                <button
-                  onClick={() => toggleFAQ(faq.id)}
-                  className="w-full flex items-center justify-between py-6 text-left group focus:outline-none transition-colors"
-                >
-                  <span className="pr-4 text-base font-semibold text-white transition-colors duration-200 group-hover:text-blue-200 sm:text-lg">
-                    {faq.question}
-                  </span>
-                  <Plus
-                    className={`h-5 w-5 shrink-0 text-blue-300 transition-transform duration-300 ${
-                      isOpen ? "rotate-45" : ""
-                    }`}
-                  />
-                </button>
-
-                {/* Animated Answer Body */}
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" as const }}
-                      className="overflow-hidden"
-                    >
-                      <p className="pb-6 text-sm leading-[1.7] text-white/55 sm:text-base">
-                        {faq.answer}
-                      </p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            );
-          })}
-        </div>
+    <section id="faq" className="faq-section page-container">
+      <div className="section-heading">
+        <span className="eyebrow">FAQ</span>
+        <h2>Frequently asked questions</h2>
+        <p>Common questions from editors before they buy.</p>
       </div>
+      <div className="faq-grid">
+        {faqs.map((faq) => (
+          <div className="faq-item" key={faq.id}>
+            <h3>
+              <button
+                type="button"
+                id={`question-${faq.id}`}
+                aria-expanded={openId === faq.id}
+                aria-controls={`answer-${faq.id}`}
+                onClick={() => setOpenId(openId === faq.id ? null : faq.id)}
+              >
+                {faq.question}
+                <Plus
+                  size={18}
+                  className={openId === faq.id ? "rotate-45" : ""}
+                />
+              </button>
+            </h3>
+            <div
+              id={`answer-${faq.id}`}
+              role="region"
+              aria-labelledby={`question-${faq.id}`}
+              hidden={openId !== faq.id}
+            >
+              <p>{faq.answer}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <p className="faq-contact">
+        Still have questions?{" "}
+        <Link href="/contact">
+          Contact us <span aria-hidden="true">↗</span>
+        </Link>
+      </p>
     </section>
   );
-};
-
-export default FAQSection;
+}

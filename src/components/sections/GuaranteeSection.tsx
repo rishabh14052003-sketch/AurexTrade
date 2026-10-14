@@ -45,7 +45,7 @@ export const GuaranteeSection: React.FC = () => {
         {/* 3. Heading */}
         <motion.h2
           variants={itemVariants}
-          className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase text-white tracking-tight mb-3"
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3"
         >
           7-Day Money-Back Guarantee
         </motion.h2>
@@ -63,7 +63,7 @@ export const GuaranteeSection: React.FC = () => {
           variants={itemVariants}
           className="text-base sm:text-lg text-[#999999] max-w-[600px] mb-10 leading-relaxed font-normal"
         >
-          We are confident in the quality of our course. If you are not completely
+          We are confident in the quality of our plugins. If you are not completely
           satisfied within 7 days of purchase, we will give you a full refund.
           No forms, no hassle, no questions.
         </motion.p>
@@ -99,7 +99,7 @@ export const GuaranteeSection: React.FC = () => {
             size="lg"
             className="w-full sm:w-auto min-w-[240px]"
           >
-            Enroll Risk-Free &rarr;
+            Explore the packs &rarr;
           </Button>
         </motion.div>
 

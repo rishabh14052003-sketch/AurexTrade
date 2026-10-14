@@ -13,7 +13,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({
 }) => {
   return (
     <div
-      className={`bg-[#111111] border border-[#222222] rounded-[4px] p-6 flex flex-col justify-between w-[320px] md:w-[360px] shrink-0 shadow-md ${className}`}
+      className={`bg-[#111111] border border-[#222222] rounded-2xl p-6 flex flex-col justify-between w-[320px] md:w-[360px] shrink-0 shadow-md ${className}`}
     >
       <div>
         {/* 5 Gold Stars */}
@@ -38,7 +38,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({
           </span>
         </div>
         {review.product && (
-          <span className="text-[11px] text-[#CC0000] font-semibold mt-1.5 uppercase tracking-wider">
+          <span className="text-[11px] text-[#609cff] font-semibold mt-1.5 uppercase tracking-wider">
             {review.product}
           </span>
         )}

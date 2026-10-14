@@ -21,7 +21,7 @@ export const NewsletterSection: React.FC = () => {
     <section className="border-t border-white/10 bg-[#111216] py-20 sm:py-24">
       <div className="max-w-[600px] mx-auto px-4 sm:px-6 text-center">
         {/* Heading */}
-        <h2 className="text-3xl sm:text-4xl font-bold uppercase text-white tracking-tight mb-3">
+        <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-3">
           New packs before anyone else
         </h2>
 
@@ -37,12 +37,14 @@ export const NewsletterSection: React.FC = () => {
             className="flex flex-col sm:flex-row items-stretch gap-3 max-w-lg mx-auto"
           >
             <input
+              aria-label="Email address"
+              autoComplete="email"
               type="email"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address"
-              className="bg-[#111111] border border-[#222222] focus:border-[#CC0000] text-white placeholder-[#444444] px-5 py-[14px] rounded-[2px] flex-1 text-sm outline-none transition-colors"
+              className="bg-[#111111] border border-[#222222] focus:border-[#0561ff] text-white placeholder-[#444444] px-5 py-[14px] rounded-xl flex-1 text-sm outline-none transition-colors"
             />
             <Button
               type="submit"
@@ -53,9 +55,9 @@ export const NewsletterSection: React.FC = () => {
             </Button>
           </form>
         ) : (
-          <div className="bg-[#111111] border border-[#CC0000]/40 p-4 rounded-[2px] max-w-lg mx-auto">
-            <p className="text-[#CC0000] font-semibold text-base">
-              Your email app opened. Send the message to request updates.
+          <div className="bg-[#111111] border border-[#0561ff]/40 p-4 rounded-xl max-w-lg mx-auto">
+            <p className="text-[#0561ff] font-semibold text-base">
+              Send the prepared email to request updates.
             </p>
           </div>
         )}

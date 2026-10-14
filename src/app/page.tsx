@@ -2,7 +2,7 @@ import React from "react";
 import HeroSection from "@/components/sections/HeroSection";
 import ProductsSection from "@/components/sections/ProductsSection";
 import ReviewsSection from "@/components/sections/ReviewsSection";
-import GuaranteeSection from "@/components/sections/GuaranteeSection";
+import BundleSection from "@/components/sections/BundleSection";
 import FAQSection from "@/components/sections/FAQSection";
 import NewsletterSection from "@/components/sections/NewsletterSection";
 
@@ -12,7 +12,7 @@ export default function HomePage() {
       <HeroSection />
       <ProductsSection />
       <ReviewsSection />
-      <GuaranteeSection />
+      <BundleSection />
       <FAQSection />
       <NewsletterSection />
     </>

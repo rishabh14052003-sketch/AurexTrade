@@ -23,7 +23,7 @@ export const Button: React.FC<ButtonProps> = ({
   type = "button",
 }) => {
   const baseStyles =
-    "inline-flex items-center justify-center font-semibold uppercase tracking-[0.1em] transition-all duration-200 cursor-pointer rounded-[2px] border select-none text-center";
+    "inline-flex items-center justify-center font-semibold  transition-all duration-200 cursor-pointer rounded-xl border select-none text-center";
 
   const sizeStyles = {
     sm: "px-4 py-2 text-xs",
@@ -33,7 +33,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   const variantStyles = {
     primary:
-      "bg-[#CC0000] border-[#CC0000] text-white hover:bg-[#aa0000] hover:border-[#aa0000] active:scale-[0.98]",
+      "bg-[#0561ff] border-[#0561ff] text-white hover:bg-[#2878ff] hover:border-[#2878ff] active:scale-[0.98]",
     outline:
       "bg-transparent border-white text-white hover:bg-white hover:text-black active:scale-[0.98]",
     ghost:
